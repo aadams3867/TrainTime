@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Uber Rail</title>
+
+	<!-- jQuery link -->
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Firebase JavaScript Link -->
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+	<!-- Moment.js Link -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+		<!-- Jumbotron -->
+		<div class="jumbotron" style="background-color:black; color: white;" >
+
+			<h1 class="text-center">Uber Rail</h1>
+			<h3 class="text-center">Welcome to the easiest way to get around the country</h3>
+		</div>
+
+		<!-- Current Train Schedule Panel -->
+		<div class="panel panel-primary">
+		  <div class="panel-heading">
+		    <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+		  </div>
+
+		  <div class="panel-body">
+		    <!-- Table -->
+		    <table class="table table-hover" id="trainTable">
+		    	<thead>
+		    	  <tr>
+				    <th>Train Name</th>
+				    <th>Destination</th>
+				    <th>Frequency (min)</th>
+				    <th>Next Arrival</th>
+				    <th>Minutes Away</th>
+				  </tr>
+				 </thead>
+
+				 <tbody>
+	
+				</tbody>
+		    </table>
+		  </div>
+		</div>
+
+		<!-- Add Train Panel -->
+		<div class="panel panel-primary">
+		  <div class="panel-heading">
+		    <h3 class="panel-title"><strong>Add Train</strong></h3>
+		  </div>
+
+		  <div class="panel-body">
+		    <form>
+			  <div class="form-group">
+			    <label for="trainNameInput">Train Name</label>
+			    <input type="text" class="form-control" id="trainNameInput">
+			  </div>
+			  <div class="form-group">
+			    <label for="destinationInput">Final Destination</label>
+			    <input type="text" class="form-control" id="destinationInput">
+			  </div>
+			  <div class="form-group">
+			    <label for="firstTrainInput">Time of First Train of the Day (HH:mm - military time)</label>
+			    <input type="text" class="form-control" id="firstTrainInput">
+			  </div>
+			  <div class="form-group">
+			    <label for="frequencyInput">Frequency (min)</label>
+			    <input type="text" class="form-control" id="frequencyInput">
+			  </div>
+		  	  <button type="submit" class="btn btn-primary" id="addTrainButton">Submit</button>
+			</form>
+		  </div>
+		</div>
+	</div>
+
+	<!-- JavaScript file -->
+	<script src="assets/javascript/app.js"></script>
+</body>
+</html>
